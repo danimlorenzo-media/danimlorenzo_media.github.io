@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Lunes Santo",
+    "date": "2026-03-30",
+    "description": "Galería de ejemplo. Bórrala o edítala desde el panel.",
+    "photos": [
+      "/media/ejemplo-1.jpg",
+      "/media/ejemplo-2.jpg",
+      "/media/ejemplo-3.jpg",
+      "/media/ejemplo-4.jpg"
+    ]
+  },
+  {
+    "title": "Atardeceres",
+    "date": "2026-06-12",
+    "description": "",
+    "photos": [
+      "/media/ejemplo-5.jpg",
+      "/media/ejemplo-6.jpg",
+      "/media/ejemplo-2.jpg"
+    ]
+  }
+]
