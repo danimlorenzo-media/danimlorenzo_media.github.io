@@ -1,0 +1,62 @@
+media:
+  input: media
+  output: /media
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: galleries
+    label: Galerías
+    type: file
+    path: content/galleries.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Título de la galería (ej. Lunes Santo)
+        type: string
+        required: true
+      - name: date
+        label: Fecha
+        type: date
+      - name: description
+        label: Descripción (opcional)
+        type: text
+      - name: photos
+        label: Fotos (la primera será la portada)
+        type: image
+        list: true
+
+  - name: site
+    label: Datos de la web
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: name
+        label: Nombre
+        type: string
+      - name: tagline
+        label: Frase bajo el nombre
+        type: string
+      - name: heroImage
+        label: Foto de portada
+        type: image
+      - name: about
+        label: Presentación
+        type: text
+      - name: instagram
+        label: Enlace de Instagram
+        type: string
+      - name: facebook
+        label: Enlace de Facebook (opcional)
+        type: string
+      - name: email
+        label: Correo
+        type: string
+      - name: phone
+        label: Teléfono (opcional)
+        type: string
+      - name: location
+        label: Ciudad o zona
+        type: string
