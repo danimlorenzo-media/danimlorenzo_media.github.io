@@ -172,7 +172,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .lb-figure { max-width: 94vw; max-height: 92vh; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .lb-figure img { max-width: 94vw; max-height: 86vh; object-fit: contain; }
-.lb-figure figcaption { color: #bdb8b0; font-size: .78rem; letter-spacing: .14em; }
+.lb-figure figcaption { color: #bdb8b0; font-size: .78rem; letter-spacing: .14em; display: flex; gap: 22px; align-items: center; }
+.lb-dl { color: #fff; opacity: .8; text-transform: uppercase; font-size: .72rem; letter-spacing: .2em; border-bottom: 1px solid rgba(255,255,255,.4); padding-bottom: 1px; cursor: pointer; transition: opacity .2s; }
+.lb-dl:hover { opacity: 1; }
 .lb-btn { position: absolute; color: #fff; opacity: .7; transition: opacity .2s; line-height: 1; }
 .lb-btn:hover { opacity: 1; }
 .lb-close { top: 14px; right: 20px; font-size: 2.6rem; padding: 6px 12px; }

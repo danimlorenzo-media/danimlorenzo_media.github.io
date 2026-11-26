@@ -197,10 +197,13 @@
   var lb = document.getElementById("lightbox");
   var lbImg = document.getElementById("lb-img");
   var lbCap = document.getElementById("lb-cap");
+  var lbDl = document.getElementById("lb-dl");
   function show(i) {
     idx = (i + current.length) % current.length;
     lbImg.src = current[idx];
     lbCap.textContent = (idx + 1) + " / " + current.length;
+    lbDl.href = current[idx];
+    lbDl.setAttribute("download", decodeURIComponent(current[idx].split("/").pop().split("?")[0]));
     [idx + 1, idx - 1].forEach(function (j) {
       var p = new Image(); p.src = current[(j + current.length) % current.length];
     });
