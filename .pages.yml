@@ -25,7 +25,8 @@ content:
       - name: photos
         label: Fotos (la primera será la portada)
         type: image
-        list: true
+        options:
+          multiple: { max:200 }
 
   - name: site
     label: Datos de la web
