@@ -13,11 +13,19 @@
   {
     "title": "Atardeceres",
     "date": "2026-06-12",
-    "description": "",
     "photos": [
       "/media/ejemplo-5.jpg",
       "/media/ejemplo-6.jpg",
       "/media/ejemplo-2.jpg"
+    ]
+  },
+  {
+    "title": "Esperanza Triana",
+    "date": "2026-11-26",
+    "photos": [
+      "/media/photo-2026-10-04-18-46-11-2.jpg",
+      "/media/photo-2026-10-04-18-46-10-3.jpg",
+      "/media/photo-2026-10-04-18-46-09-4.jpg"
     ]
   }
 ]
