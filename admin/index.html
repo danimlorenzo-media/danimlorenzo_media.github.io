@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel — fotos</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- Entrada -->
+  <section id="login" class="login">
+    <div class="login-box">
+      <h1>Panel de la web</h1>
+      <p class="lead">Desde aquí se suben las galerías y las fotos. Solo hace falta entrar una vez en cada ordenador.</p>
+
+      <label for="repo">Repositorio de GitHub</label>
+      <input id="repo" type="text" placeholder="usuario/usuario.github.io" autocomplete="off" spellcheck="false">
+
+      <label for="token">Clave de acceso (token)</label>
+      <input id="token" type="password" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
+
+      <label class="check"><input id="remember" type="checkbox" checked> Recordar en este ordenador</label>
+
+      <button id="connect" class="btn primary" type="button">Entrar</button>
+      <p id="login-msg" class="msg" role="status"></p>
+
+      <details class="help">
+        <summary>¿Cómo consigo la clave de acceso?</summary>
+        <ol>
+          <li>Entra en GitHub con tu cuenta y ve a <strong>Settings → Developer settings → Personal access tokens → Fine-grained tokens</strong>.</li>
+          <li>Pulsa <strong>Generate new token</strong> y ponle un nombre (por ejemplo "Panel de la web").</li>
+          <li>En <strong>Expiration</strong> elige la fecha más lejana que permita (hasta 1 año).</li>
+          <li>En <strong>Repository access</strong> elige <strong>Only select repositories</strong> y marca solo el repositorio de la web.</li>
+          <li>En <strong>Permissions → Repository permissions</strong> pon <strong>Contents: Read and write</strong>.</li>
+          <li>Pulsa <strong>Generate token</strong>, copia el texto que empieza por <code>github_pat_</code> y pégalo arriba. Solo se muestra una vez.</li>
+        </ol>
+      </details>
+    </div>
+  </section>
+
+  <!-- Aplicación -->
+  <div id="app" hidden>
+    <header class="bar">
+      <strong class="bar-title">Panel</strong>
+      <nav class="tabs">
+        <button type="button" class="tab active" data-tab="galleries">Galerías</button>
+        <button type="button" class="tab" data-tab="site">Datos de la web</button>
+      </nav>
+      <span class="spacer"></span>
+      <a class="link" href="../" target="_blank" rel="noopener">Ver la web ↗</a>
+      <button id="logout" class="link" type="button">Salir</button>
+    </header>
+
+    <main>
+      <section id="view-galleries" class="split">
+        <aside class="side">
+          <button id="new-gallery" class="btn" type="button">＋ Nueva galería</button>
+          <div id="gallery-list" class="gallery-list"></div>
+        </aside>
+        <div id="editor" class="editor"></div>
+      </section>
+
+      <section id="view-site" class="narrow" hidden></section>
+    </main>
+
+    <div id="dirtybar" class="dirtybar" hidden>
+      <span>Hay cambios sin publicar.</span>
+      <span class="spacer"></span>
+      <button id="discard" class="btn" type="button">Descartar</button>
+      <button id="publish" class="btn primary" type="button">Publicar cambios</button>
+    </div>
+  </div>
+
+  <div id="busy" class="busy" hidden><div class="busy-box"><div class="spin"></div><p id="busy-text"></p></div></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -41,7 +41,14 @@ Cloudflare puede ir cambiando sus menús; si no ves "Pages", usa la opción A.
 2. Autoriza la aplicación y elige el repositorio.
 3. Verás dos apartados: **Galerías** y **Datos de la web**.
 
-## Uso diario (para tu padre)
+## Panel propio (alternativa sin límites): /admin
+
+La web incluye su propio panel en `TU-WEB/admin/`. Sube las fotos directamente a GitHub
+desde el navegador, así que no tiene el límite de 4,5 MB de Pages CMS. Reduce cada foto
+a 2000 px automáticamente, admite muchas a la vez y publica todo en un solo cambio.
+Necesita una clave (token) de GitHub: las instrucciones salen en la propia pantalla de entrada.
+
+## Uso diario con Pages CMS (para tu padre)
 
 **Nueva galería (por ejemplo "Lunes Santo"):**
 Panel → Galerías → añadir elemento nuevo → escribe el título, la fecha →
